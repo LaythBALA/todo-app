@@ -1,0 +1,110 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #17181f;
+  color: #ddd;
+}
+
+main{
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+form{
+  border: 3px solid #30313D;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+}
+
+form input[type="text"] {
+  background: none;
+  border: 0;
+  padding: 0 8px;
+  display: block;
+  width: 100%;
+  color: white;
+}
+
+form button {
+  background-color: #61DAFB;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task {
+  background-color: #30313D;
+  border-radius: 10px;
+  padding: 5px 9px;
+  margin-top: 5px;
+  display: flex;
+  transition: opacity .3s linear;
+  align-items: center;
+}
+
+.task svg {
+  height: 20px;
+  margin-right: 6px;
+  fill: #61DAFB;
+}
+
+.task.done {
+  opacity: 0.3;
+}
+
+.task-name, 
+.task form {
+  flex-grow: 1;
+}
+
+.task span {
+  position: relative;
+  flex-grow: 1;
+}
+
+.task span:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 12px;
+  transition: width .2s linear;
+}
+
+.task.done span:before {
+  width: 100%;
+}
+
+.unchecked-box,
+.checked-box {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.trash {
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+
+.trash svg {
+  fill: #888;
+  height: 14px;
+}
+
+.task input {
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 2px 4px;
+}
